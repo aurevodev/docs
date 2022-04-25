@@ -1,7 +1,7 @@
 ---
 sidebarDepth: 0
 ---
-# Getting Started with Aurevo
+# Getting Started
 
 ## Sign Up
 
