@@ -6,7 +6,7 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
   title: "Aurevo",
   themeConfig: {
     enableDarkMode: true,
-    repo: "https://git.aurevo.org/aurevo/aurevo/docs",
+    repo: "https://github.com/aurevodev/docs",
     logo: "/logo.svg",
     nav: [
       { text: "Log In", link: "https://dash.aurevo.org/" },
