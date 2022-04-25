@@ -9,7 +9,7 @@ subActionLink: /guide/getting-started.html
 ---
 
 ::: slot heroText
-<b class="gradient">Aurevo</b>Documentation
+<b class="gradient">Aurevo </b>Documentation
 :::
 
 ::: slot tagline
