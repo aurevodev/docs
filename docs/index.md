@@ -17,7 +17,7 @@ Everything you needed to get started with Aurevo!
 :::
 
 ::: slot footer
-Powered by VuePress
+
 <br>
 Copyright © 2022 Aurevo, LLC.
 :::
