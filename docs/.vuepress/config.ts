@@ -27,13 +27,6 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
           ],
         },
         {
-          title: "Legal",
-          collapsable: true,
-          children: [
-            "/guide/privacy_policy",
-          ],
-        },
-        {
           title: "Contact",
           collapsable: false,
           children: [
