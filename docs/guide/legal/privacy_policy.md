@@ -76,7 +76,7 @@ We use the collected data for various purposes.
 We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy.
 If you would like to purge your data please contact us at support@aurevo.org.
 
-### 7. Transfer of Data
+## 7. Transfer of Data
 
 Your information, including Personal Data, may be transferred to – and maintained on – computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.
 
