@@ -7,7 +7,7 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
   themeConfig: {
     enableDarkMode: true,
     repo: "https://github.com/aurevodev/docs",
-    logo: "/logo.svg",
+    logo: "/logo.png",
     nav: [
       { text: "Log In", link: "https://dash.aurevo.org/" },
     ],
@@ -27,11 +27,18 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
           ],
         },
         {
+          title: "Legal",
+          collapsable: true,
+          children: [
+            "/guide/privacy_policy",
+          ],
+        },
+        {
           title: "Contact",
           collapsable: false,
           children: [
-            ['https://discord.gg/aurevo', 'Discord'],
-            ['https://discord.gg/aurevo', 'Contact Support'],
+            ['https://aurevo.org.invite', 'Discord'],
+            ['https://aurevo.org.invite', 'Contact Support'],
           ],
         },
       ],
