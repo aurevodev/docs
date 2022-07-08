@@ -2,7 +2,9 @@
 
 Currently, The follwing regions are available.
 
-|Datacenter	| Geographic Location	        | Slug    |
-|-----------|-------------------------------|---------|
-|LONDON	    | London, United Kingdom	    | `eu-west` |
-|TEXAS	    |Texas, United States  | `us-west` |
+| Name	                  | Code         |
+|-------------------------|--------------|
+| US West (N. California)	| `us-west`    |
+| US East (N. Virginia)	  | `us-east`    |
+| Europe (London)		      | `eu-west`    |
+| Europe (Frankfurt)		  | `eu-central` |
