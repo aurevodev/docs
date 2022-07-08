@@ -9,7 +9,7 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
     repo: "https://github.com/aurevodev/docs",
     logo: "/logo.png",
     nav: [
-      { text: "Log In", link: "https://dash.aurevo.org/" },
+      { text: "Dashboard", link: "https://dashboard.aurevo.org/" },
     ],
     sidebar: {
       "/guide/": [
@@ -20,10 +20,11 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
         },
         {
           title: "Guide",
-          collapsable: false,
+          collapsable: true,
           children: [
             "/guide/home",
-            "/guide/regions"
+            "/guide/regions",
+            "/guide/edge_network"
           ],
         },
         {
