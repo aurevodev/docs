@@ -6,5 +6,5 @@ Currently, The follwing regions are available.
 |-------------------------|--------------|
 | US West (N. California)	| `us-west`    |
 | US East (N. Virginia)	  | `us-east`    |
-| Europe (London)		      | `eu-west`    |
-| Europe (Frankfurt)		  | `eu-central` |
+| Europe (London, UK)		      | `eu-west`    |
+| Europe (Frankfurt, Germany)		  | `eu-central` |
