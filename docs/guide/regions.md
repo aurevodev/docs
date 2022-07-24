@@ -1,6 +1,6 @@
 # Regions
 
-Currently, The follwing regions are available.
+Currently, The following regions are available.
 
 | Name	                                     | Code            |
 |--------------------------------------------|-----------------|
