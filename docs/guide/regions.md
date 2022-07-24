@@ -8,3 +8,4 @@ Currently, The follwing regions are available.
 | US East (N. Virginia)	  | `us-east`    |
 | Europe (London, UK)		      | `eu-west`    |
 | Europe (Frankfurt, Germany)		  | `eu-central` |
+| Asia Pacific (Tokyo, Japan)		  | `ap-northeast` |
