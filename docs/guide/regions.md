@@ -9,3 +9,8 @@ Currently, The follwing regions are available.
 | Europe (London, UK)		      | `eu-west`    |
 | Europe (Frankfurt, Germany)		  | `eu-central` |
 | Asia Pacific (Tokyo, Japan)		  | `ap-northeast` |
+
+
+### Here's the map.
+
+![](https://static.aurevocdn.xyz/images/map.svg)
