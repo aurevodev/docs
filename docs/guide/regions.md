@@ -2,13 +2,13 @@
 
 Currently, The follwing regions are available.
 
-| Name	                  | Code         |
-|-------------------------|--------------|
-| US West (N. California)	| `us-west`    |
-| US East (N. Virginia)	  | `us-east`    |
-| Europe (London, UK)		      | `eu-west`    |
-| Europe (Frankfurt, Germany)		  | `eu-central` |
-| Asia Pacific (Tokyo, Japan)		  | `ap-northeast` |
+| Name	                                     | Code            |
+|--------------------------------------------|-----------------|
+| Dallas, Texas, United States               | `us-west`       |
+| New York City, New York, United States	   | `us-east`       |
+| Coventry, United Kingdom		               | `eu-west`       |
+| Frankfurt, Germany		                     | `eu-central`    |
+| Tokyo, Japan		                           | `ap-northeast`  |
 
 
 ### Here's the map.
