@@ -13,4 +13,4 @@ Currently, The following regions are available.
 
 ### Here's the map.
 
-![](https://static.aurevocdn.xyz/images/map.svg)
+![](https://static.aurevocdn.xyz/images/world_map.png)
