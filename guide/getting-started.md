@@ -9,4 +9,4 @@ When you create a Aurevo account, you can choose to sign up with an email addres
 
 It is required to use your legal name while creating an account or it may be terminated.
 
-[Sign Up](https://aurevo.org/register)
+[Sign Up](https://dash.aurevo.us/auth/register)
