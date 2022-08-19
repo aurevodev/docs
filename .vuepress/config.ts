@@ -9,37 +9,24 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
     repo: "https://github.com/aurevodev/docs",
     logo: "/logo.png",
     nav: [
-      { text: "Dashboard", link: "https://dashboard.aurevo.org/" },
+      { text: "Dashboard", link: "https://dashboard.aurevo.us/" },
     ],
     sidebar: {
-      "/guide/": [
+      "/": [
         {
           title: "Overview",
-          collapsable: false,
-          children: ["/guide/", "/guide/getting-started"],
-        },
-        {
-          title: "Guide",
           collapsable: true,
           children: [
-            "/guide/home",
-            "/guide/regions",
-            "/guide/edge_network"
-          ],
-        },
-        {
-          title: "Legal",
-          collapsable: false,
-          children: [
-            "/guide/legal/privacy_policy",
+            "/overview/getting-started",
+            "/overview/edge",
+            "/overview/regions"
           ],
         },
         {
           title: "Contact",
           collapsable: false,
           children: [
-            ['https://aurevo.org.invite', 'Discord'],
-            ['https://aurevo.org.invite', 'Contact Support'],
+            ['https://aurevo.us/invite', 'Discord'],
           ],
         },
       ],

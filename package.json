@@ -3,8 +3,8 @@
   "name": "@aurevo/docs",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vuepress dev --temp .temp",
-    "build": "vuepress build --temp .temp"
+    "dev": "vuepress dev",
+    "build": "vuepress build"
   },
   "devDependencies": {
     "vuepress": "1.9.7",
