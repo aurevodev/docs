@@ -23,6 +23,13 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
           ],
         },
         {
+          title: "Developers",
+          collapsable: true,
+          children: [
+            "/overview/api",
+          ],
+        },
+        {
           title: "Contact",
           collapsable: false,
           children: [
@@ -30,18 +37,6 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
           ],
         },
       ],
-      // "/api/": [
-      //   {
-      //     title: "Config",
-      //     path: "/api/",
-      //     collapsable: false,
-      //     children: [
-      //       "/api/config-theme",
-      //       "/api/config-frontmatter",
-      //       "/api/config-home",
-      //     ],
-      //   },
-      // ],
     },
     codeSwitcher: {
       groups: {
