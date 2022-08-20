@@ -26,7 +26,7 @@ export default defineConfig4CustomTheme<ThemeConfig>((ctx) => ({
           title: "Developers",
           collapsable: true,
           children: [
-            "/refrence/api",
+            "/reference/api",
           ],
         },
         {
