@@ -5,8 +5,14 @@
     }
   },
   "index": "Introduction",
+  "-- Platform --": {
+    "type": "separator",
+    "title": "Platform"
+  },
   "getting-started": "Getting Started",
-  "overview": "Overview",
+  "overview": {
+    "title": "Overview"
+  },
   "changelog": {
     "title": "Changelog",
     "href": "https://github.com/aurevodev/docs",
