@@ -13,6 +13,13 @@
   "overview": {
     "title": "Overview"
   },
+  "-- Developers --": {
+    "type": "separator",
+    "title": "Developers"
+  },
+  "reference": {
+    "title": "API Reference"
+  },
   "changelog": {
     "title": "Changelog",
     "href": "https://github.com/aurevodev/docs",
