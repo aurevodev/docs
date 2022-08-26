@@ -1,10 +1,7 @@
 import {
-  ArrowsExpandIcon,
   ChipIcon,
-  CloudUploadIcon,
   FingerPrintIcon,
   LightningBoltIcon,
-  RefreshIcon,
 } from "@heroicons/react/outline";
 
 const features = [
