@@ -1,0 +1,15 @@
+{
+  "*": {
+    "theme": {
+      "footer": false
+    }
+  },
+  "index": "Introduction",
+  "getting-started": "Getting Started",
+  "overview": "Overview",
+  "changelog": {
+    "title": "Changelog",
+    "href": "https://github.com/aurevodev/docs",
+    "newWindow": true
+  }
+}

@@ -1,1 +1,0 @@
-# `@aurevo/docs`
