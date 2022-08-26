@@ -13,9 +13,9 @@ const useDark = () => {
 };
 
 const theme = {
-  github: "https://github.com/aurevo/docs",
-  projectLink: "https://github.com/aurevo/docs",
-  docsRepositoryBase: "https://github.com/aurevo/docs/blob/main/pages",
+  github: "https://github.com/aurevodev/docs",
+  projectLink: "https://github.com/aurevodev/docs",
+  docsRepositoryBase: "https://github.com/aurevodev/docs/blob/main/pages",
   titleSuffix: " | Aurevo",
   search: true,
   unstable_flexsearch: true,
