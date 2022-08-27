@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@heroicons/react": "^1.0.6",
+    "@heroicons/react": "~1.0.6",
     "next": "~12.2.5",
     "next-themes": "0.2.0",
     "nextra": "2.0.0-alpha.56",
