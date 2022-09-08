@@ -3,13 +3,13 @@ const withNextra = require("nextra")({
   themeConfig: "./theme.config.js",
   unstable_flexsearch: true,
   unstable_staticImage: true,
-});
-
-module.exports = withNextra({
-  reactStrictMode: true,
   experimental: {
     images: {
         unoptimized: true
     }
-}
+  }
+});
+
+module.exports = withNextra({
+  reactStrictMode: true,
 });

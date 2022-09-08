@@ -1,8 +1,8 @@
 import {
-  ChipIcon,
+  CpuChipIcon,
   FingerPrintIcon,
-  LightningBoltIcon,
-} from "@heroicons/react/outline";
+  BoltIcon,
+} from "@heroicons/react/24/outline";
 
 const features = [
   {
@@ -11,11 +11,11 @@ const features = [
   },
   {
     name: "Automated",
-    icon: LightningBoltIcon,
+    icon: BoltIcon,
   },
   {
     name: "Enterprise Hardware",
-    icon: ChipIcon,
+    icon: CpuChipIcon,
   },
 ];
 
