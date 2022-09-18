@@ -22,10 +22,14 @@ const features = [
 function Features() {
   return (
     <>
-    <p align="center">
-    <img width="80px" height="80px" src="https://aurevocdn.xyz/branding/aurevo_blue_light.png" alt="Aurevo Logo">
-    </img>
-    </p>
+      <p align="center">
+        <img
+          width="80px"
+          height="80px"
+          src="https://aurevocdn.xyz/branding/aurevo_blue_light.png"
+          alt="Aurevo Logo"
+        ></img>
+      </p>
       <div className="grid grid-cols-2 gap-6 my-12 sm:grid-cols-3 ">
         {features.map(({ icon: Icon, ...feature }, i) => (
           <div

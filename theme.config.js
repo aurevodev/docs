@@ -30,7 +30,7 @@ const theme = {
         <img
           width="35"
           src="https://aurevocdn.xyz/branding/aurevo_blue_light.png"
-          alt="Aurevo logo"
+          alt="Aurevo"
         />
         <span className="w-full font-bold pl-2">Aurevo</span>
       </>
@@ -68,4 +68,5 @@ const theme = {
     return "Edit this page on GitHub";
   },
 };
+
 export default theme;
