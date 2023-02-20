@@ -4,32 +4,33 @@ description: Account related operations on the API
 ---
 
 # Register User
+
 Register a new user account.
 
 ## Endpoint
+
 **POST** `/auth/register`
 
 Request Parameters
 The request should include the following parameters in JSON format:
 
-| Parameter  | Type   | Required | Description         |
-| ---------- | ------ | -------- | ------------------- |
-| `username` | string | Yes      | The user's username |
-| `first_name` | string | Yes | The user's first name |
-| `last_name` | string | Yes | The user's last name |
-| `email` | string | Yes | The user's email address |
-| `telephone` | number | Yes | The user's telephone number |
-| `country` | string | Yes | The user's country |
+| Parameter    | Type   | Required | Description                 |
+| ------------ | ------ | -------- | --------------------------- |
+| `username`   | string | Yes      | The user's username         |
+| `first_name` | string | Yes      | The user's first name       |
+| `last_name`  | string | Yes      | The user's last name        |
+| `email`      | string | Yes      | The user's email address    |
+| `telephone`  | number | Yes      | The user's telephone number |
+| `country`    | string | Yes      | The user's country          |
 
 Response
 If the request is successful, the API will respond with an HTTP status code of 201 and a JSON object containing the following:
 
-| Parameter    | Type   | Description                                                |
-| ------------ | ------ | ---------------------------------------------------------- |
+| Parameter    | Type   | Description                                                 |
+| ------------ | ------ | ----------------------------------------------------------- |
 | `statusCode` | number | HTTP status code returned by the API (e.g. 201 for success) |
-| `message`    | string | A message indicating the outcome of the API call           |
-| `payload`    | object | A JSON object containing any data returned by the API      |
-
+| `message`    | string | A message indicating the outcome of the API call            |
+| `payload`    | object | A JSON object containing any data returned by the API       |
 
 ### Example Request
 
@@ -55,4 +56,3 @@ HTTP/1.1 201 CREATED
     "payload": ...data
 }
 ```
-
