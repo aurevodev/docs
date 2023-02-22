@@ -13,6 +13,9 @@
   "overview": {
     "title": "Overview"
   },
+  "API Reference": {
+    "title": "api-reference"
+  },
   "changelog": {
     "title": "Changelog",
     "href": "https://github.com/aurevodev/docs",
