@@ -20,8 +20,6 @@ The request should include the following parameters in JSON format:
 | `first_name` | string | Yes      | The user's first name       |
 | `last_name`  | string | Yes      | The user's last name        |
 | `email`      | string | Yes      | The user's email address    |
-| `telephone`  | number | Yes      | The user's telephone number |
-| `country`    | string | Yes      | The user's country          |
 
 ## Response
 If the request is successful, the API will respond with an HTTP status code of 201 and a JSON object containing the following:
@@ -41,8 +39,6 @@ POST /auth/register
     "first_name": "John",
     "last_name": "Doe",
     "email": "johndoe@example.com",
-    "telephone": 1234567890,
-    "country": "United States"
 }
 ```
 
@@ -53,6 +49,6 @@ HTTP/1.1 201 CREATED
 {
     "statusCode": 201,
     "message": "Created",
-    "payload": ...data
+    "payload": {}
 }
 ```
