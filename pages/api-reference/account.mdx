@@ -45,10 +45,12 @@ POST /auth/register
 ### Example Response
 
 ```json
-HTTP/1.1 201 CREATED
+HTTP/2 201 CREATED
 {
     "statusCode": 201,
     "message": "Created",
-    "payload": {}
+    "payload": {
+        created: true,
+    }
 }
 ```

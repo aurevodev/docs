@@ -22,6 +22,12 @@ Aurevo's API uses standard HTTP response codes to indicate the success or failur
 | 429  | Too Many Requests - Too many requests have been sent in a given amount of time. |
 | 500, 502, 503, 504  | Server Errors - Something went wrong on the server side. These errors are rare. |
 
-## Error Types
-- `api_error`: API errors cover any other type of problem (e.g., a temporary problem with Aurevo's servers), and are extremely uncommon.
-- `invalid_request_error`: Invalid request errors arise when your request has invalid parameters.
+## Error Responses
+
+```json
+{
+    statusCode: 500,
+    message: "INTERNAL_SERVER_ERROR",
+    error: "Something went wrong while processing this request"
+}
+```
