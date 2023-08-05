@@ -45,20 +45,20 @@ Our error response structure consists of the following fields:
 
 ```json filename="error.json" copy
 {
-  "error": "Not authorized",
-  "message": "FORBIDDEN",
+  "error": "FORBIDDEN",
+  "message": "Token is invalid or expired authorization token",
   "statusCode": 403
 }
 ```
 
 While we recommend that you write error messages that fit your needs and provide
-your users with the best experience, our error fields are designed to not
+your users with the best experience, our message fields are designed to not
 contain sensitive information, and can be safely passed down to user interfaces.
 
 ### Versioning
 
-To ensure seamless communication and compatibility with our API, we always
-include the current version information in the `API-Version` request header.
+We include the current version information in the API-Version response header.
+Our API versioning follows a date-based structure in the format of `YYYY/MM/DD`.
 
 ### Rate Limits
 
@@ -75,7 +75,6 @@ limits vary and are specified by the following header in all responses:
 
 Every API request you make is assigned a unique request identifier for easy
 tracking and troubleshooting. This identifier can be found in the response
-headers under X-Request-Id. In the rare event that you encounter an issue with
+headers under `X-Request-Id`. In the rare event If you encounter an issue with
 our service, providing this request identifier to our support team will expedite
-the resolution process, allowing us to quickly pinpoint and address any concerns
-you may have.
+the resolution process.

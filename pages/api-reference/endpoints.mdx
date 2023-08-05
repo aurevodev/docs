@@ -21,7 +21,7 @@ import { Callout } from 'nextra/components'
 
 ## User
 
-### Get User - `/user`
+### `GET` Get User - `/user`
 
 Retrieves information related to the currently authenticated user.
 
@@ -49,12 +49,12 @@ Retrieves information related to the currently authenticated user.
         "email":"string",
         "country":"string",
         "balance":"number",
-        "metadata":"array[]",
+        "metadata":"string[]",
         "verified":"boolean",
         "limit":"number",
-        "role":"enum",
-        "created_at":"Timestamp",
-        "updated_at":"Timestamp"
+        "role":"string",
+        "created_at":"string",
+        "updated_at":"string"
     }
 }
 ```
@@ -63,8 +63,8 @@ Retrieves information related to the currently authenticated user.
 | Code  | Description                             |
 | ----- | --------------------------------------- |
 | `200` | Successful response.                    |
-| `403` | Invalid or expired authorization token. |
 | `401` | Authorization header is missing.        |
+| `403` | Invalid or expired authorization token. |
 </Tab>
 </Tabs>
 </details>
@@ -75,7 +75,7 @@ Retrieves information related to the currently authenticated user.
 
 ## Databases
 
-### Get Databases - `/databases`
+### `GET` Get Databases - `/databases`
 
 Retrieves databases that the current authenticated user has.
 
@@ -103,7 +103,7 @@ Retrieves databases that the current authenticated user has.
 			"type": "string",
 			"connection_url": "string",
 			"zone": "string",
-			"created_at": "Timestamp",
+			"created_at": "string",
 			"container": {
 				"status": "string"
 			}
@@ -116,13 +116,13 @@ Retrieves databases that the current authenticated user has.
 | Code  | Description                             |
 | ----- | --------------------------------------- |
 | `200` | Successful response.                    |
-| `403` | Invalid or expired authorization token. |
 | `401` | Authorization header is missing.        |
+| `403` | Invalid or expired authorization token. |
 </Tab>
 </Tabs>
 </details>
 
-### Get Database - `/databases/:platform_uuid`
+### `GET` Get Database - `/databases/:platform_uuid`
 
 Retrieves the database that is allocated with the `platform_uuid`.
 
@@ -151,20 +151,16 @@ Retrieves the database that is allocated with the `platform_uuid`.
 			"type": "string",
 			"connection_url": "string",
 			"zone": "string",
-			"created_at": "Timestamp",
-			"updated_at": "Timestamp"
+			"created_at": "string",
+			"updated_at": "string"
 		},
 		"container": {
-			"created_at": "Timestamp",
-			"id": "string",
 			"memory": {
 				"limit": "number",
 				"usage": "number",
 				"used_percentage": "number"
 			},
-			"region": "string",
-			"status": "string",
-			"zone": "string"
+			"status": "string"
 		}
 	}
 }
@@ -174,9 +170,100 @@ Retrieves the database that is allocated with the `platform_uuid`.
 | Code  | Description                             |
 | ----- | --------------------------------------- |
 | `200` | Successful response.                    |
-| `403` | Invalid or expired authorization token. |
 | `401` | Authorization header is missing.        |
+| `403` | Invalid or expired authorization token. |
 | `404` | Not found.                              |
+</Tab>
+</Tabs>
+</details>
+
+### `POST` Create Database - `/databases`
+
+Create database for the current authenticated user.
+
+<details>
+  <summary>Show More</summary>
+  <Tabs items={['cURL', 'Response', 'Response Codes']}>
+  <Tab>
+  ```sh copy
+     curl --request POST \
+              --url https://api.aurevo.us/databases \
+              --header 'Authorization: Bearer <TOKEN>' \
+              --header 'Content-Type: application/json' \
+                   --data '{
+                       "name": "string",
+     	                 "region": "string",
+     	                 "type": "string"
+                     }'
+  ```
+  </Tab>
+<Tab>
+  ```json copy
+{
+	"message": "Created",
+	"payload": {
+		"platform_uuid": "string",
+		"container_id": "string",
+		"name": "string",
+		"region": "string",
+		"type": "string",
+		"connection_url": "string",
+		"zone": "string",
+		"created_at": "string"
+	},
+	"statusCode": 201
+}
+```
+</Tab>
+<Tab>
+| Code  | Description                             |
+| ----- | --------------------------------------- |
+| `201` | Resource Created.                       |
+| `400` | Bad request.                            |
+| `401` | Authorization header is missing.        |
+| `403` | Invalid or expired authorization token. |
+
+</Tab>
+</Tabs>
+</details>
+
+### `DELETE` Delete Database - `/databases/`
+
+Delete database using the `id` of the current authenticated user.
+
+<details>
+  <summary>Show More</summary>
+  <Tabs items={['cURL', 'Response', 'Response Codes']}>
+  <Tab>
+  ```sh copy
+     curl --request DELETE \
+              --url https://api.aurevo.us/databases \
+              --header 'Authorization: Bearer <TOKEN>' \
+              --header 'Content-Type: application/json' \
+                   --data '{
+                      "id": "string"
+                  }'
+  ```
+  </Tab>
+<Tab>
+  ```json copy
+{
+	"message": "Success",
+	"payload": {
+		"deleted": true
+	},
+	"statusCode": 200
+}
+```
+</Tab>
+<Tab>
+| Code  | Description                             |
+| ----- | --------------------------------------- |
+| `200` | Resource Deleted.                       |
+| `401` | Authorization header is missing.        |
+| `403` | Invalid or expired authorization token. |
+| `404` | Not found.                              |
+
 </Tab>
 </Tabs>
 </details>
