@@ -1,0 +1,81 @@
+---
+title: Aurevo REST API
+---
+
+---
+
+# Aurevo REST API
+
+---
+
+Aurevo REST API allows developers to interact programmatically with their Aurevo
+account and services using HTTP requests.
+
+The API supports any programming language or framework that can send HTTP
+requests.
+
+You can use the commands listed below with `curl` by providing your token.
+
+## API Basics
+
+Our API is exposed as an HTTP/1 and HTTP/2 service over TLS. All endpoints live
+under the URL https://api.aurevo.us and then generally follow the REST
+architecture.
+
+### Content Type
+
+All requests must be encoded as JSON with the Content-Type: `application/json`
+header. If not otherwise specified, responses from the Aurevo API, including
+errors, are encoded exclusively as JSON as well.
+
+### Authentication
+
+Aurevo Access Tokens are required to authenticate and use the API.
+
+```js filename="index.js" copy
+  Authorization: Bearer <TOKEN>
+```
+
+### Errors
+
+All API endpoints follow a consistent format for error responses to ensure a
+clear communication.
+
+Our error response structure consists of the following fields:
+
+```json filename="error.json" copy
+{
+  "error": "Not authorized",
+  "message": "FORBIDDEN",
+  "statusCode": 403
+}
+```
+
+While we recommend that you write error messages that fit your needs and provide
+your users with the best experience, our error fields are designed to not
+contain sensitive information, and can be safely passed down to user interfaces.
+
+### Versioning
+
+To ensure seamless communication and compatibility with our API, we always
+include the current version information in the `API-Version` request header.
+
+### Rate Limits
+
+We limit the number of calls you can make over a certain period of time. Rate
+limits vary and are specified by the following header in all responses:
+
+| Header                  | Description                                                                  |
+| ----------------------- | ---------------------------------------------------------------------------- |
+| `X-Ratelimit-Limit`     | The maximum number of requests that the consumer is permitted to make.       |
+| `X-Ratelimit-Remaining` | The number of requests remaining in the current rate limit window.           |
+| `X-Ratelimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds. |
+
+### Request IDs
+
+Every API request you make is assigned a unique request identifier for easy
+tracking and troubleshooting. This identifier can be found in the response
+headers under X-Request-Id. In the rare event that you encounter an issue with
+our service, providing this request identifier to our support team will expedite
+the resolution process, allowing us to quickly pinpoint and address any concerns
+you may have.

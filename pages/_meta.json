@@ -1,0 +1,20 @@
+{
+  "index": {
+    "title": "Introduction"
+  },
+  "faqs": {
+    "title": "FAQs",
+    "type": "page"
+  },
+  "products": "Products",
+  "-- Infrastructure": {
+    "type": "separator",
+    "title": "INFRASTRUCTURE"
+  },
+  "network": "Network",
+  "-- API Reference": {
+    "type": "separator",
+    "title": "API Reference"
+  },
+  "api-reference": "Aurevo REST API"
+}

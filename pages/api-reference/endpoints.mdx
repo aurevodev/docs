@@ -1,0 +1,182 @@
+---
+title: Endpoints
+---
+
+import { Tabs, Tab } from 'nextra/components'
+import { Callout } from 'nextra/components'
+
+---
+
+# Aurevo REST API Endpoints
+
+<Callout type='warning'>
+  Please note that this documentation is currently a work in progress.
+</Callout>
+
+<Callout>
+  Always remember to use the `BASE_URL` as `https://api.aurevo.us`
+</Callout>
+
+---
+
+## User
+
+### Get User - `/user`
+
+Retrieves information related to the currently authenticated user.
+
+<details>
+  <summary>Show More</summary>
+  <Tabs items={['cURL', 'Response', 'Response Codes']}>
+  <Tab>
+  ```sh copy
+    curl --request GET \
+         --url https://api.aurevo.us/user \
+         --header 'Authorization: Bearer <TOKEN>'
+  ```
+  </Tab>
+<Tab>
+  ```json copy
+{
+    "statusCode":200,
+    "message":"Success",
+    "payload":{
+        "platform_uuid":"string",
+        "image_hash":"string",
+        "first_name":"string",
+        "last_name":"string",
+        "username":"string",
+        "email":"string",
+        "country":"string",
+        "balance":"number",
+        "metadata":"array[]",
+        "verified":"boolean",
+        "limit":"number",
+        "role":"enum",
+        "created_at":"Timestamp",
+        "updated_at":"Timestamp"
+    }
+}
+```
+</Tab>
+<Tab>
+| Code  | Description                             |
+| ----- | --------------------------------------- |
+| `200` | Successful response.                    |
+| `403` | Invalid or expired authorization token. |
+| `401` | Authorization header is missing.        |
+</Tab>
+</Tabs>
+</details>
+
+## Servers
+
+## Applications
+
+## Databases
+
+### Get Databases - `/databases`
+
+Retrieves databases that the current authenticated user has.
+
+<details>
+  <summary>Show More</summary>
+  <Tabs items={['cURL', 'Response', 'Response Codes']}>
+  <Tab>
+  ```sh copy
+    curl --request GET \
+         --url https://api.aurevo.us/databases \
+         --header 'Authorization: Bearer <TOKEN>'
+  ```
+  </Tab>
+<Tab>
+  ```json copy
+{
+	"statusCode": 200,
+	"message": "Success",
+	"payload": [
+		{
+			"platform_uuid": "string",
+			"container_id": "string",
+			"name": "string",
+			"region": "string",
+			"type": "string",
+			"connection_url": "string",
+			"zone": "string",
+			"created_at": "Timestamp",
+			"container": {
+				"status": "string"
+			}
+		}
+	]
+}
+```
+</Tab>
+<Tab>
+| Code  | Description                             |
+| ----- | --------------------------------------- |
+| `200` | Successful response.                    |
+| `403` | Invalid or expired authorization token. |
+| `401` | Authorization header is missing.        |
+</Tab>
+</Tabs>
+</details>
+
+### Get Database - `/databases/:platform_uuid`
+
+Retrieves the database that is allocated with the `platform_uuid`.
+
+<details>
+  <summary>Show More</summary>
+  <Tabs items={['cURL', 'Response', 'Response Codes']}>
+  <Tab>
+  ```sh copy
+    curl --request GET \
+         --url https://api.aurevo.us/databases/:platform_uuid \
+         --header 'Authorization: Bearer <TOKEN>'
+  ```
+  </Tab>
+<Tab>
+  ```json copy
+{
+	"statusCode": 200,
+	"message": "Success",
+	"payload": {
+		"data": {
+			"id": "number",
+			"platform_uuid": "string",
+			"container_id": "string",
+			"name": "string",
+			"region": "string",
+			"type": "string",
+			"connection_url": "string",
+			"zone": "string",
+			"created_at": "Timestamp",
+			"updated_at": "Timestamp"
+		},
+		"container": {
+			"created_at": "Timestamp",
+			"id": "string",
+			"memory": {
+				"limit": "number",
+				"usage": "number",
+				"used_percentage": "number"
+			},
+			"region": "string",
+			"status": "string",
+			"zone": "string"
+		}
+	}
+}
+```
+</Tab>
+<Tab>
+| Code  | Description                             |
+| ----- | --------------------------------------- |
+| `200` | Successful response.                    |
+| `403` | Invalid or expired authorization token. |
+| `401` | Authorization header is missing.        |
+| `404` | Not found.                              |
+</Tab>
+</Tabs>
+</details>
